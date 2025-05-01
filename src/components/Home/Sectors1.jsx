@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link"; // ✅ Import Link for client-side navigation
 import {
   FaSeedling, FaSatelliteDish, FaPlane,
   FaGraduationCap, FaHospital, FaLaptopCode,
@@ -41,7 +42,9 @@ export default function Sectors() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className='text-2xl sm:text-4xl font-bold mb-2 text-center'>Sectors <span className='underline underline-offset-4 decoration-1 under font-light decoration-gray-900 text-[#fc9908]'>We are Into</span>
+        className='text-2xl sm:text-4xl font-bold mb-2 text-center'
+      >
+        Sectors <span className='underline underline-offset-4 decoration-1 under font-light decoration-gray-900 text-[#fc9908]'>We are Into</span>
       </motion.h2>
 
       <motion.p
@@ -82,10 +85,14 @@ export default function Sectors() {
               {sector.description}
             </p>
 
-            <button
-              className="font-semibold border border-[#fc9908] text-[#fc9908] py-2 px-4 rounded-full transition duration-300 hover:bg-[#fc9908] hover:text-white"
-            ><a href="/Sectors">Read More</a>
-            </button>
+            {/* ✅ Updated Button with Next.js Link */}
+            <Link href="/Sectors">
+              <button
+                className="font-semibold border border-[#fc9908] text-[#fc9908] py-2 px-4 rounded-full transition duration-300 hover:bg-[#fc9908] hover:text-white"
+              >
+                Read More
+              </button>
+            </Link>
           </motion.div>
         ))}
       </div>
