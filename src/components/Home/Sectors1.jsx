@@ -86,7 +86,7 @@ export default function Sectors() {
             </p>
 
             {/* ✅ Updated Button with Next.js Link */}
-            <Link href="src/pages/Sectors.jsx">
+            <Link href="/sectors">
               <button
                 className="font-semibold border border-[#fc9908] text-[#fc9908] py-2 px-4 rounded-full transition duration-300 hover:bg-[#fc9908] hover:text-white"
               >
