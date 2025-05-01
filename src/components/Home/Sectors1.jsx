@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link"; // ✅ Import Link for client-side navigation
+import Link from "next/link"; // ✅ Next.js client-side routing
 import {
   FaSeedling, FaSatelliteDish, FaPlane,
   FaGraduationCap, FaHospital, FaLaptopCode,
@@ -44,7 +44,7 @@ export default function Sectors() {
         viewport={{ once: true }}
         className='text-2xl sm:text-4xl font-bold mb-2 text-center'
       >
-        Sectors <span className='underline underline-offset-4 decoration-1 under font-light decoration-gray-900 text-[#fc9908]'>We are Into</span>
+        Sectors <span className='underline underline-offset-4 decoration-1 font-light decoration-gray-900 text-[#fc9908]'>We are Into</span>
       </motion.h2>
 
       <motion.p
@@ -85,8 +85,8 @@ export default function Sectors() {
               {sector.description}
             </p>
 
-            {/* ✅ Updated Button with Next.js Link */}
-            <Link href="/sectors">
+            {/* ✅ FINAL WORKING LINK */}
+            <Link href="/Sectors">
               <button
                 className="font-semibold border border-[#fc9908] text-[#fc9908] py-2 px-4 rounded-full transition duration-300 hover:bg-[#fc9908] hover:text-white"
               >
